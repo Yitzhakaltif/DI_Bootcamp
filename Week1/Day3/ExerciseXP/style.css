@@ -1,0 +1,42 @@
+div {
+    text-align: center;
+    color: black;
+    font-size: 4em;
+
+}
+.greenbox{
+    background-color: #A4E6A4;
+    
+    width: 100%;
+    height: 20%;
+
+}
+
+.purplebox {
+    background-color: #CEAAF0;
+    align-self: center;
+    height: 52%;
+    width: 40%;
+
+}
+
+.pinkbox{
+    background-color: #F288D5;
+    width: 100%;
+
+}
+
+.sectionflexbox {
+    border: 3px solid black; 
+    height: 300px;
+    /*important properties on the parent container*/
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+
+}

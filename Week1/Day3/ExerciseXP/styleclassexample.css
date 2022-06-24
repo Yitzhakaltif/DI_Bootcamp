@@ -1,0 +1,46 @@
+
+/*GENERAL CSS*/
+
+div {
+    text-align: center;
+    color: black;
+    font-size: 4em;
+    flex-basis: 100px ;
+}
+
+.greenbox {
+    background-color: #A4E6A4;
+}
+
+.purplebox {
+    background-color: #CEAAF0;
+}
+
+.pinkbox{
+    background-color: #F288D5;
+}
+
+.bluebox{
+    background-color: #438EEA;
+}
+
+.yellowbox{
+    background-color: #F4ED79;
+}
+
+.redbox{
+    background-color: #F8394F;
+}
+
+/*-----------------------------*/
+
+.sectionflexbox {
+    border: 3px solid black; 
+    height: 300px;
+    /*important properties on the parent container*/
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
