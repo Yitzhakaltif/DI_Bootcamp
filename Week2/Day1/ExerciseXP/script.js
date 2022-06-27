@@ -220,7 +220,7 @@ false - true
 
 "Bob" - "bill"
 // Prediction: NaN, they cannot be subtracted from each other because they are both strings
-// Actual:NaN
+// Actual:NaN */
 
 
 
