@@ -8,7 +8,10 @@ let pattern = "";
 for (let i = 1; i <= 6; i++) {
     pattern += "*".repeat(i) + "\n";
 }
+
 console.log(pattern);
+
+
 
 pattern = "";
 
@@ -18,5 +21,6 @@ for (let i = 1; i <= 6; i++) {
     }
     pattern += "\n";
 }
+
 console.log(pattern);
 // Do this Daily Challenge by youself, without looking at the answers on the internet.
