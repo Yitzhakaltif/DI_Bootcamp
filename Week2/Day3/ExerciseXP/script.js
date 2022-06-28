@@ -71,12 +71,13 @@ for (let i=0; i<colors.length; i++) {
 //console.log(typeof user);
 //2. While the number is smaller than 10 continue asking the user for a new number.
 //Tip : Which while loop is more relevant for this situation?
+let user;
 do {
-       var user = prompt("Enter the number!");
-     }
-     while (user < 10);
-     */
-
+    user = parseInt(prompt('Give me a number'));
+}
+while(user < 10 || Number.isNaN(user));
+//from your help in the meeting.
+*/
 
     /*  Exercise 4 : Building Management
     //  Instructions:
