@@ -17,7 +17,7 @@ console.log(pattern);
 pattern = "";
 
 for (let i = 1; i <= 6; i++) {
-    for (let j = 1; j <= i; j++) {
+    for (let hi = 1; hi <= i; hi++) {
         pattern += "*";
     }
     pattern += "\n";
