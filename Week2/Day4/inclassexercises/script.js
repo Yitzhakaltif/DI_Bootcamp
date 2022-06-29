@@ -13,4 +13,3 @@ function js(myAge){
     return (`the age of my ${mom} is twice my age, and my ${dad} is 1.2 the age of my ${mom}`)
 }
 console.log(js(15));
-let hi = hello; 
