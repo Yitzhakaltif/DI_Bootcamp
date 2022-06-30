@@ -20,4 +20,3 @@ function wordsInTheStars() {
 }
 
 wordsInTheStars()
-ssss
