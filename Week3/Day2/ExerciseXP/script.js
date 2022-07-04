@@ -26,23 +26,30 @@ function txtClick(){
 
 /*Exercise: 3
 //1
-let = allBoldItems;
+let allBoldItems;
+
 //2
-function getBotld_items(){
-    let = allBoldItems;
+function getBold_items() {
+  allBoldItems = document.querySelectorAll('strong'); 
 }
 //3
 function highlight(){
-    let blu = document.querySelectorAll('p')[4];
-    blu.style.color = 'blue';
+    for (let i=0; i<allBoldItems.length; i++)
+    {                                                    
+     allBoldItems[i].style.color = "blue";
+     }
 
 }
 //4
-function return_normal(){
-   let blck = document.querySelectorAll('p')[4];
-   blck.style.color = 'black';
+function return_normal()
+{
+  for (let i=0; i<allBoldItems.length; i++) 
+  {
+       allBoldItems[i].style.color = "black";
+  }
 }
 //5
+getBold_items();
 highlight();
 return_normal();
 */
