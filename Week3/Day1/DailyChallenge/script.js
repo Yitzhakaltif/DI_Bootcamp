@@ -58,7 +58,7 @@ let plutoAppend = document.getElementsByClassName('listPlanets')[0];
 divPluto.style.backgroundColor = 'cyan';
 plutoAppend.appendChild(divPluto); 
 
-//I am aware that a loop would be better but i am not sure hot to do it exactly.
+//I am aware that a loop would be better but i am not sure how to do it exactly.
 
 
 
