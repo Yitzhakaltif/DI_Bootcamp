@@ -59,5 +59,5 @@ return_normal();
 
 
 
-//change the onclicks to be in the js file only.
+
 //dont do exercises with forms and other things we didnt cover in class.
