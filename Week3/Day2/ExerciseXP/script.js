@@ -42,6 +42,7 @@ function return_normal(){
    let blck = document.querySelectorAll('p')[4];
    blck.style.color = 'black';
 }
+//5
 highlight();
 return_normal();
 */
