@@ -1,0 +1,10 @@
+.btn-big {
+	padding:  20px;
+	margin:  10px;
+	box-shadow: 4px 5px grey;
+}
+
+.img-small {
+	width: 200px;
+	height: 200px;
+}

@@ -1,4 +1,4 @@
-/*exercise: 1
+/*exercise: 1*/
 //1
 let a = document.getElementsByTagName('h1');
 console.log(a);
@@ -22,9 +22,36 @@ function txtClick(){
     let e = document.querySelectorAll("article")[0];
     e.style.fontWeight = 'bold';
     }
-*/
 
-/*Exercise: 3
+/*Exercise: 2*/
+//1
+let form = document.forms[0];
+console.log(form);
+//2
+console.log(document.getElementById("fname"));
+console.log(document.getElementById("lname"))
+// console.log(document.getElementById('submit')); //commented because of ex:4
+//3
+console.log(document.getElementsByName('fname'));
+console.log(document.getElementsByName('lname'));
+//4
+form.addEventListener("submit", List);
+function List(ev) {
+  ev.preventDefault();
+    firstName = form.elements.fname.value;
+    lastName = form.elements.lname.value;
+    if (firstName != "" && lastName != "") {
+        ul = document.getElementsByClassName("usersAnswer")[0];
+        fNameAnswer = document.createElement("li");
+        fNameAnswer.innerText = firstName;
+        lNameAnswer = document.createElement("li");
+        lNameAnswer.innerText = lastName;
+        ul.appendChild(fNameAnswer);
+        ul.appendChild(lNameAnswer);
+    }
+}
+
+/*Exercise: 3*/
 //1
 let allBoldItems;
 
@@ -52,7 +79,25 @@ function return_normal()
 getBold_items();
 highlight();
 return_normal();
-*/
+
+/*exercise: 4*/
+let forms = document.forms[1];
+
+forms.addEventListener("submit", volumeCalculater);
+
+function volumeCalculater(ev){
+  
+    let radius = forms.radius.value;
+
+    let volume = 4/3*Math.PI*Math.pow(radius,3);
+    
+    ev.preventDefault();
+
+    console.log(`Radius = ${radius}, Volume = ${volume} `);
+
+    forms.volume.value = volume;
+
+}
 
 
 
@@ -60,4 +105,6 @@ return_normal();
 
 
 
-//dont do exercises with forms and other things we didnt cover in class.
+
+
+
