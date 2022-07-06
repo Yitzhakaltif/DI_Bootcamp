@@ -11,7 +11,7 @@ for (const item of inputs) {
 let story = document.getElementById("story");
 function btnClick(event) {
     let button = document.getElementById("lib-button");
-    story.textContent = `${noun.value} ${adjective.value} ${person.value} ${verb.value} ${place.value}`;
+    story.textContent = `The ${noun.value} ${adjective.value} ${person.value} in ${verb.value} with ${place.value}`;
 event.preventDefault();
     console.log(button);
     
