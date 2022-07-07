@@ -57,7 +57,7 @@ function pickColor(evt){
 
 let divGridPaint = document.querySelectorAll("#gridPaint div");
 
-function clickedChange() {
+function colorChange() {
 	let mouseDown = 0;
 	document.body.onmousedown = function() { 
  	 mouseDown++;
@@ -75,7 +75,7 @@ function clickedChange() {
 	}
 }
 
-clickedChange();
+colorChange();
   
 let clearButton = document.getElementById('clearbtn')
 clearButton.addEventListener('click', clrBtn);
