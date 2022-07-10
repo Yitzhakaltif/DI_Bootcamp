@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">	 
+	<link rel="stylesheet" href="style.css">
+	<title>ToDoList</title>
+</head>
+
+
+<body >
+	<div class="container">
+		<div class="d-flex flex-column justify-content-center  align-items-center">
+			<h1 class="text-center text-white">TO-DO LIST</h1>
+			<form class="d-flex justify-content-around  align-items-center bg-white col-4" action="">
+				<div class="col-10">
+					<input type="text" placeholder="new task" class="form-control border-0" name="" id="taskName">
+	
+				</div>
+				<div class="col-2">
+					<button  class="btn " type="submit" name="" id="adder">ADD</button>
+				</div>
+	
+			</form>
+			<div id="list" class="bg-white col-4 mt-4 p-3 d-flex flex-column align-items-end">
+				
+			
+					<button class="btn btn-link textPink col-auto border-0" id="removeAll" >
+						clear
+					</button>
+				
+			</div>
+		</div>
+		
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
