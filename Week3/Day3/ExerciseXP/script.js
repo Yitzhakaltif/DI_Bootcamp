@@ -55,11 +55,11 @@ function startDragging(evt) {
   evt.dataTransfer.setData("text/plain", evt.target.id);
 }
 
-let dropZon = document.getElementById("target");
+let dropZone = document.getElementById("target");
 
 function manipulateDropZone() {
-  dropZon.addEventListener("dragover", draggingOver);
-  dropZon.addEventListener("drop", dropping);
+  dropZone.addEventListener("dragover", draggingOver);
+  dropZone.addEventListener("drop", dropping);
 }
 
 manipulateDropZone();
