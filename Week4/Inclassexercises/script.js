@@ -49,3 +49,34 @@ checkfriend()
 
 // 5. after the function", Harry
 console.log("after the function", friend);
+
+
+/*# Functions & Arrow functions
+## Exercise 1:
+//1. Greet the user with his name, the user's name is a parameter. Do this exercise,
+//* first by using function declarations
+// function greet (){
+function welcome (username){
+	alert(`hello ${username}`);
+}
+welcome('john');
+//* then function expression,
+const welcomeSecond = function (username){
+	alert(`Hello ${username}`)
+}
+
+welcomeSecond("John");
+//* then arrow function
+const welcomeThird = (username) => alert(`Hello ${username}`)
+welcomeThird("John");
+*/
+
+/*## Exercise 2: Function & Arrow function & Ternary Operator*/
+//1. Check if the user's age is higher than 18. Use ternary operator.
+//- if the user's age is higher than 18, return "You can drive"
+//- else, return "You cannot drive"
+//Do this exercise,
+//* first by using function declarations
+
+//* then function expression,
+//* then arrow function
