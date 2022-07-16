@@ -1,5 +1,66 @@
-#imgback{
-    background-image: url("circuit-pattern.png")
-    background-color blueviolet;
-    background-size: cover;
-}
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url("circuit-pattern.png");
+    background-color: darkmagenta
+  }
+  
+  .navbar {
+    font-family: "SEGA LOGO FONT", 'Times New Roman';
+    display: flex;
+    font-size: 20px;
+    width: 100vw;
+    background-image: url("card-pattern.png");
+    background-color: lightgreen;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-indent: 2em;
+  }
+  
+  .search {
+    display: flex;
+    margin-left: 70px;
+    width: 30%;
+    height: min-content;
+    padding-bottom: 8px;
+    font-size: 10px;
+    align-content: center;
+  }
+  
+  .card img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    align-items: center;
+    text-align: left;
+    background-color: aliceblue
+  }
+  
+  .card {
+    justify-content: center;
+    padding: 15px;
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+    background-image: url("card-pattern.png");
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    word-wrap:break-word;
+    background-color: #156b99;
+    align-items: center;
+    background-blend-mode:lighten;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
