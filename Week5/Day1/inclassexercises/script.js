@@ -96,10 +96,11 @@ try {
   someVar = 'Still going to try';
 } catch(e) {
   console.log(e);
+  //e is the error that happened in the tr block 
 }
 console.log("after")
 // 1. Which type of error will be thrown ? Look on the different types errors on Google
-// A type Error will be thrown
+// TypeError because it was an unsuccessful operation trying to redefine a const variable
 // 2. Is the console.log("after") will be shown on the console ?
 // Yes
 
