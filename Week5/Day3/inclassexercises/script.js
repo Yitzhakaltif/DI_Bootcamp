@@ -120,4 +120,4 @@ function displayError(object) {
 
 // # Part III
 // If the giphy API doesn't find a gif (because the word can be strange) - display a gif that says "404 ERROR"
-
+//couldnt figure it out within time
