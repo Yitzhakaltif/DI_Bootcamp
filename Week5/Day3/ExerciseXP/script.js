@@ -43,7 +43,7 @@ compareToTen(8)
     .catch((error) => console.log(error)); 
 
 
-//Exercise 3
+//Exercise: 3
 //1
 Promise.resolve(3)
 .then(
