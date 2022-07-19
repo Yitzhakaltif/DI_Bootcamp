@@ -1,4 +1,4 @@
-// Part 1
+// Part: 1
 makeAllCaps = (array) => {
     console.log(array);
     return array.map((i) => i.toUpperCase());
@@ -16,7 +16,7 @@ makeAllCaps = (array) => {
     .then((result) => console.log(result))
     .catch((err) => console.log(err));
 
-// Part 2
+// Part: 2
 
 let morse = `{
     "0": "-----",
