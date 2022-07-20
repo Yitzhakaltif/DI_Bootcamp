@@ -168,24 +168,24 @@ async function getGif (wordrandom){
 	}
 }
 
-// async function displayGif(){
-// 	try {
-// 		let word = await fetchWord();
-// 		let gif = await getGif(word);
-// 		if (gif["data"].length == 0){
-// 			throw new Error ("GIF NOT FOUND")
-// 		} else {
-// 			let url = gif["data"]["images"]["original"]["url"];
-// 			let imageGif =  document.createElement("img");
-// 			imageGif.setAttribute("src", url);
-// 			document.body.appendChild(imageGif);
-// 		}
-// 	} catch (error){
-// 		console.log(error.message)
-// 	}
-// }
+async function displayGif(){
+	try {
+		let word = await fetchWord();
+		let gif = await getGif(word);
+		if (gif["data"].length == 0){
+			throw new Error ("GIF NOT FOUND")
+		} else {
+			let url = gif["data"]["images"]["original"]["url"];
+			let imageGif =  document.createElement("img");
+			imageGif.setAttribute("src", url);
+			document.body.appendChild(imageGif);
+		}
+	} catch (error){
+		console.log(error.message)
+	}
+}
 
 
-// displayGif()
+displayGif()
 
 
