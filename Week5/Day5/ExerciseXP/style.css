@@ -1,0 +1,80 @@
+body {
+    background-color: black;
+    background-image: url("https://media.giphy.com/media/3ohjUP97HUAuEC4sZa/giphy.gif");
+    font-family: 'Helvetica Neue';
+    color: yellow;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-blend-mode: normal;
+    height: 100vh;
+  }
+
+  .logo {
+  
+    background: url("https://i.dlpng.com/static/png/253278_thumb.png") center no-repeat;
+    width: 400px;
+    height: 300px;
+    margin:  0 auto;
+    margin-top: -20px;
+  }
+
+  .info-container{
+  
+    border: 3px solid yellow;
+    border-radius: 15px;
+    width: 600px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: -25px;
+  
+  }
+
+  #button{
+    margin-top: 20px;
+    border: 3px solid yellow;
+    border-radius: 10px;
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: lightyellow;
+}
+  
+button:focus {
+    outline:0;
+}
+
+#name{
+    color: white;
+    font-size: 30px;
+    
+}
+
+#height{
+    color: white;
+    font-size: 20px;
+}
+
+#gender{
+    color: white;
+    font-size: 20px;
+}
+
+#birth-year{
+    color: white;
+    font-size: 20px;
+}
+
+#home-world{
+    color: white;
+    font-size: 20px;
+}
+
+
+p{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}

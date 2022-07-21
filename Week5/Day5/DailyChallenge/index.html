@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyChallenge</title>
-</head>
-<body>
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>DailyChallenge: Currency Converter</title>
+  </head>
+  <body>
+    <h1>Currency Converter</h1><br>
+    <h2>From:</h2><hr>
 
+    <div class="container">
+      <div class="currency">
+        <select id="currency-one">
+          
+          <option value="ILS">₪ILS</option>
+          <option value="USD" selected>$USD</option>
+          <option value="EUR">€EUR</option>
+          <option value="GBP">£GBP</option>
+       
+        </select>
+        <input type="number" id="amount-one" placeholder="0" value="1">
+      </div>
 
+      <div class="switch-container">
+        <button class="btn" id="switch">Switch</button>
+        <div class="switch" id="switcher"></div>
+      </div>
+
+      <div class="currency">
+        <select id="currency-two">
+            <option value="ILS" selected>₪ILS</option>
+            <option value="USD">$USD</option>
+            <option value="EUR">€EUR</option>
+            <option value="GBP">£GBP</option>
+        </select>
+        <input type="number" id="amount-two" placeholder="0">
+      </div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
