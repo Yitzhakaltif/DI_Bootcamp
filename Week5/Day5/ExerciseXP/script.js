@@ -1,26 +1,62 @@
-const xhr = new XMLHttpRequest();
-const button = document.querySelector('#button');
-// const names = document.querySelectorAll('#name');
-const height = document.querySelector('#height');
-const gender = document.querySelector('#gender');
-const birthYear = document.querySelector('#birth-year');
-const homeWorld = document.querySelector('#home-world');
+// const xhr = new XMLHttpRequest();
+// const button = document.querySelector('#button');
+// // const names = document.querySelectorAll('#name');
+// const height = document.querySelector('#height');
+// const gender = document.querySelector('#gender');
+// const birthYear = document.querySelector('#birth-year');
+// const homeWorld = document.querySelector('#home-world');
+let displayDiv = document.getElementById("displayDiv");
 
-async function getInfo(){
-    let randomNumber = Math.floor((Math.random()*88)+1)
-    let apiUrl = `https://www.swapi.tech/api/` + randomNumber
 
-    await fetch(apiUrl).then(function(response){
-        updateInfo(response.data)
-    })
+const getCharacter = async () => {
+  displayDiv.innerHTML = `<i class="fas fa-spinner fa-spin fa-5x"></i>`
+  let randomNum = Math.floor(Math.random() * 184);
+
+  try {
+    let response = await fetch(`https://swapi.dev/api/people/${randomNum}/`);
+    let data = await response.json();
+    if (data.homeworld) {
+      data.homeworld = await getPlanet(data.homeworld);
+      display(data);
+    } else {
+      displayDiv.innerHTML = `Sorry, someone's missing! Please try again.`;
+    }
+  } catch {
+    displayDiv.innerHTML = `Sorry, someone's missing! Please try again.`;
+  }
 }
 
-function updateInfo(data){
-    const names = document.querySelectorAll('#name');
-    names.innerText = data.names
+
+
+const getPlanet = async (url) => {
+  let response = await fetch(url);
+  let data = await response.json();
+  return data.name;
 }
 
-button.addEventListener(`click`, getInfo);
+const display = (data) => {
+  displayDiv.innerHTML = `<h1>${data.name}</h1>
+	<p>Height: ${data.height}</p>
+	<p>Gender: ${data.gender}</p>
+	<p>Birth Year: ${data.birth_year}</p>
+	<p>Home World: ${data.homeworld}</p>`;
+}
+
+// async function getInfo(){
+//     let randomNumber = Math.floor((Math.random()*88)+1)
+//     let apiUrl = `https://www.swapi.tech/api/people/${randomNumber}`;
+
+//     await fetch(apiUrl).then(function(response){
+//         updateInfo(response.data)
+//     })
+// }
+
+// function updateInfo(data){
+//     const names = document.querySelectorAll('#name');
+//     names.innerText = data.names
+// }
+
+// button.addEventListener(`click`, getInfo);
 
 
 

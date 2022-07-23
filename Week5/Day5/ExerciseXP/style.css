@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: black;
     background-image: url("https://media.giphy.com/media/3ohjUP97HUAuEC4sZa/giphy.gif");
     font-family: 'Helvetica Neue';
@@ -77,4 +77,55 @@ p{
     color: white;
     font-weight: bold;
     font-size: 30px;
+} */
+
+
+body {
+    background-color: black;
+    background-image: url("https://media.giphy.com/media/3ohjUP97HUAuEC4sZa/giphy.gif");
+    font-family: 'Helvetica Neue';
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-blend-mode: normal;
+    height: 100vh;
+}
+
+#button{
+    margin-top: 20px;
+    border: 3px solid yellow;
+    border-radius: 10px;
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: lightyellow;
+}
+#wrapper {
+	display: grid;
+	grid-template-rows: 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 30px;
+}
+
+img {
+	width: 400px;
+}
+
+#displayDiv {
+	border: 2px solid yellow;
+	border-radius: 15px;
+	width: 500px;
+	height: 300px;
+	color: white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
