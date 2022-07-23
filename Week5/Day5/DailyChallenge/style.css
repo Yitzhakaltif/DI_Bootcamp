@@ -3,7 +3,9 @@
 }
   
 body {
-    background-color: #abdca7;
+    background-image: url(dollarsimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     display: flex;
