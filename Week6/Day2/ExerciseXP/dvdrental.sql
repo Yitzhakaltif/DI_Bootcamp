@@ -55,8 +55,8 @@ LIMIT 20;
 --12. Write a query which will join the data in the customer table and the payment table. You want to get the amount and the date of every payment made by a customer, ordered by their id (from 1 to…).
 SELECT amount, payment_date
 FROM payment
-LEFT JOIN customer
-ON customer.customer_id = payment.payment_id
+INNER JOIN customer
+ON customer.customer_id=payment.customer_id
 ORDER BY payment_id ASC
 
 --13. You need to check your inventory. Write a query to get all the movies which are not in inventory.
