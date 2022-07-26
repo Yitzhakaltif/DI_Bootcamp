@@ -8,6 +8,7 @@ START 10;
  DeptName   CHAR(30),
  LOCATION   VARCHAR(33) UNIQUE
 );
+SELECT * FROM department
 
 
 CREATE TABLE EMPLOYEE
@@ -50,22 +51,70 @@ VALUES (9369, 'TONY', 'STARK', 'SOFTWARE ENGINEER', 7902, '1980-12-17', 2800,0,2
        (9777, 'MADII', 'HIMBURY', 'ANALYST', 7839, '1981-05-01', 2000, 200, NULL),
        (9860, 'ATHENA', 'WILSON', 'ANALYST', 7839, '1992-06-21', 7000, 100, 50),
        (9861, 'JENNIFER', 'HUETTE', 'ANALYST', 7839, '1996-07-01', 5000, 100, 50);
-SELECT * FROM EMPLOYEE
+SELECT * 
+FROM EMPLOYEE
 
 
 -- III. Display DATA
 -- 1. How many employees are in dept 10.
-
+SELECT COUNT(*) 
+FROM EMPLOYEE
+WHERE department_code = 10;
 -- 2. How many employees are analyst in dept 10.
-
+SELECT COUNT(*) 
+FROM EMPLOYEE
+WHERE department_code=10 AND job='ANALYST';
 -- 3. Display the names of each employees, their job and dept location
-
+--INNER JOIN is to join different tables depending on their relationship; foreign key refrences a primary key in another 
+SELECT employee.empfname, employee.job, location 
+FROM  employee 
+INNER JOIN department 
+ON employee.department_code = department.deptcode
 -- 4. Find the avg salary of the software engineers
-
+SELECT AVG(salary) 
+FROM EMPLOYEE 
+WHERE job 
+ILIKE '%software%';
 -- 5. Which join should we use to display the employee 9777 even if he has no deptcode?
-
+SELECT EMPFNAME,deptcode
+FROM employee
+LEFT JOIN department
+ON departmentcode=deptcode
 -- 6. Create a query that displays EMPFNAME, EMPLNAME, Department_code, DEPTNAME, LOCATION from EMPLOYEE, and DEPARTMENT tables. Make sure the results are in the ascending order based on the EMPFNAME and LOCATION of the department.
-
+SELECT employee.empfname, employee.emplname, DEPTNAME, location 
+FROM  employee 
+INNER JOIN department 
+ON employee.department_code = department.deptcode
+ORDER BY EMPFNAME, department.LOCATION ASC;
 -- 7.  Display EMPFNAME and "TOTAL SALARY" for each employee (commission and salary)
-
+SELECT empfname, (salary+commission) as total FROM employee;
 -- 8. Display MAX SALARY from the EMPLOYEE table.
+SELECT MAX(salary) FROM employee;
+
+
+-- Exercise
+-- Using the Emp/Dept database
+-- 1. Create a Boss table with the columns boss_id, boss_name, boss_type (ie.nice, angry, funny ect...),
+-- and dept_number:
+-- The boss table,has a one to one relationship with the department table:
+-- => a department can be managed by only 1 boss, and a boss can manage only 1 department
+CREATE TABLE BOSS
+(
+ boss_id   SERIAL PRIMARY KEY,
+ boss_name   VARCHAR(30),
+ boss_type   VARCHAR(30),
+ dept_number  INTEGER UNIQUE REFERENCES DEPARTMENT (DEPTCODE)
+);
+-- 1. Add a few bosses : one for the finance dept , one for sales and one for 
+-- marketing (look for the id of those dept - use subqueries)
+INSERT INTO BOSS (boss_name, boss_type, dept_number)
+VALUES
+('Arnold', 'Nice', (SELECT DEPTCODE FROM DEPARTMENT WHERE DeptName='MARKETING')),
+('Rocky', 'Funny', (SELECT DEPTCODE FROM DEPARTMENT WHERE DeptName='FINANCE')),
+('Luiz', 'Angry', (SELECT DEPTCODE FROM DEPARTMENT WHERE DeptName='SALES'));
+-- 2. What is the type and name of the boss of the dept Finance (show the dept name, not the dept id)
+SELECT boss_name, boss_type, DeptName
+FROM BOSS
+INNER JOIN DEPARTMENT
+ON dept_number=DEPTCODE
+WHERE DeptName='FINANCE';
