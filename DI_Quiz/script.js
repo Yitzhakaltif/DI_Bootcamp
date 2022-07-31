@@ -110,12 +110,23 @@ console.log("the answer to everything is", sum(42,0))*/
 // *12. DOM exercise
 
     //   1. Part I : Create a button in your HTML page, when the user will click the the button a paragraph will be added on the DOM with the content "New Paragraph". Use arrow functions
-     const btn = (el)=>{
-        const Button = document.getElementsByTagName(`button`)
-        
-     }
+  
     //   2. Part II : Add to each new paragraph a event listener of mouse over. When you hoover on a paragraph, it should become red
+//     const changeToRed = (event) => {
+//       event.target.style.color = "red";
+// }
 
+
+// const addP = () => {
+//       const p = document.createElement("p");
+//       const text = document.createTextNode("New Paragraph");
+//       p.appendChild(text);
+//       p.addEventListener("mouseover", changeToRed)
+//       document.body.appendChild(p)
+// }
+
+
+// btn.addEventListener("click", addP);
 // #### Array Methods
 
 // 14. What is the value of `passed` in the following code?
