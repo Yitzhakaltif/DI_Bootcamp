@@ -4,7 +4,7 @@
 
 // let b = 10;
 
-// console.log(`hello you are 15`);
+// console.log(`hello you are ${a+b}`);
 
 //exercise 2
 
