@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import User from './components/User';
-import users from './users.json'
+import users from './users.json';
 import 'tachyons';
+import React from 'react'
+
 
 function App() {
   // console.log(users)
