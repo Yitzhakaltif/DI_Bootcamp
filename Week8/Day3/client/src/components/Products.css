@@ -1,0 +1,18 @@
+.product{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.product h2 {
+    color: lightgrey;
+
+}
+
+
+.product h4 {
+    color: orange;
+}
