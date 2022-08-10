@@ -1,4 +1,4 @@
-const {getAllProducts, getOneProduct, searchProduct}= require('../modules/products.js');
+const {getAllProducts, getOneProduct, searchProduct, insertProduct}= require('../modules/products.js');
 
 //get all products
 //Curd - Read
@@ -40,6 +40,17 @@ const _searchProduct = (req, res)=>{
     })
 }
 
+const _insertProduct = (req, res)=>{
+    insertProduct(req.body)
+    .then(ret=>{
+        res.json(ret)
+
+    })
+    .catch(e=>{
+        console.log(e)
+        res.status(404).json({msg:'not found'})
+    })
+}
 
 
 
@@ -47,5 +58,6 @@ const _searchProduct = (req, res)=>{
 module.exports = {
     _getAllProducts,
     _getOneProduct,
-    _searchProduct
+    _searchProduct,
+    _insertProduct
 }

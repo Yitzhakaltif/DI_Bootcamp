@@ -19,9 +19,16 @@ const searchProduct = (name)=>{
     .select('id', 'name', 'price')
     .whereILike('name',`${name}%`)
 }
+//{name:'iphone', price: 1000}
+const insertProduct = (product)=>{
+    return db('products')
+    .insert(product)
+    .returning('*')
+}
 
 module.exports = {
     getAllProducts,
     getOneProduct,
-    searchProduct
+    searchProduct,
+    insertProduct
 }

@@ -13,4 +13,6 @@ app.listen(process.env.PORT, ()=>{
 })
 
 app.use(cors())
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 app.use('/api/products', products_router);
