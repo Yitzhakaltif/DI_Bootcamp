@@ -1,16 +1,17 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import axios from 'axios';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { toUnitless } from '@mui/material/styles/cssUtils';
-
+import { AppContext } from '../App';
 
 const LoginRegisterForm = (props)=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [msg, setMsg] = useState('');
+    const {setAccessToken} = useContext(AppContext); 
 
     let navigate = useNavigate();
 
@@ -42,8 +43,9 @@ const LoginRegisterForm = (props)=>{
                         'Content-Type':'application/json'
                     }  
                 });
-                console.log(response.data)
-                navigate('/home')
+                console.log(response.data);
+                setAccessToken(response.data);
+                navigate('/')
 
             } catch (error) {
                 setMsg(error.response.data.msg)
@@ -57,7 +59,7 @@ const LoginRegisterForm = (props)=>{
                 <h3>{props.title} Form</h3>
             </div>
             <Box component={'form'} sx={{m: 1}} noValidate autoComplete='off'>
-                <TextField sx={{m: 1}} id='email' label="Enter Email" variant="outlined" onChange={(e)=>setEmail(e.target.value)}/>
+                <TextField sx={{m: 1}} id='email' label="Enter Email" variant="outlined" onChange={(e)=>setEmail(e.target.value)} />
                 <TextField sx={{m: 1}} id='password' label="Enter Password" variant="outlined" onChange={(e)=>setPassword(e.target.value)}/>
             </Box>
             <Button variant='contained' onClick={handleAction}>{props.title}</Button>
