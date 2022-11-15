@@ -31,7 +31,7 @@ class App extends React.Component {
           className="pew"
           style={{ backgroundColor: "white", textAlign: "center" }}
         >
-          <h1 style={{ color: this.state.color }}>{this.state.quote.quote}</h1>
+          <h1 style={{ color: this.state.color }}>"{this.state.quote.quote}"</h1>
           <br></br>
           <p style={{ color: "black" }}>{this.state.quote.author}</p>
           <br></br>
