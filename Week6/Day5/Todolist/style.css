@@ -5,6 +5,7 @@ html {
 body {
 	margin: 0;
 	padding: 2rem;
+	background-color: crimson;
 }
 
 body, input, button {
@@ -64,7 +65,7 @@ input[type="text"] {
 }
 
 button {
-	color:white;
+	color:black;
 }
 
 
