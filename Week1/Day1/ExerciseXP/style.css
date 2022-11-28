@@ -79,6 +79,7 @@ ul
     font-size: 25px;
   }
 }
+
 @media all and (max-width: 600px) {
   h1 {
     font-size: 35px;
